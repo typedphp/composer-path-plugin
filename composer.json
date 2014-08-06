@@ -24,7 +24,10 @@
   "autoload-dev": {
     "files" : [
       "tests/TestCase.php"
-    ]
+    ],
+    "psr-4" : {
+      "TypedPHP\\Composer\\Tests\\" : "tests"
+    }
   },
   "extra" : {
     "class" : [
