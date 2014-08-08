@@ -63,8 +63,9 @@ class PathPluginInstaller extends LibraryInstaller
 
     $pattern = preg_quote($pattern, "#");
     $pattern = str_replace("\\*", ".*", $pattern);
+    $pattern = "#^" . $pattern . "$#";
 
-    return (boolean) preg_match("#^" . $pattern . "$#", $string);
+    return (boolean) preg_match($pattern, $string);
   }
 
   /**

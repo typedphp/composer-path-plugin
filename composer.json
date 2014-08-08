@@ -1,5 +1,5 @@
 {
-  "name" : "typedphp/php-composer-path-plugin",
+  "name" : "typedphp/composer-path-plugin",
   "type" : "composer-plugin",
   "license" : "MIT",
   "authors" : [
