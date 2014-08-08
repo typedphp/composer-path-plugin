@@ -18,6 +18,7 @@ class PathPluginInstallerTest extends TestCase
     $composer->shouldReceive("getPackage")->andReturn($root);
 
     $package = $this->getNewPackageMock();
+    $package->shouldReceive("getName")->andReturn("bar/baz");
 
     $installer           = $this->getNewInstallerMock();
     $installer->composer = $composer;
@@ -30,11 +31,11 @@ class PathPluginInstallerTest extends TestCase
     $installer->shouldReceive("getRootPath")->once();
     $installer->shouldReceive("getPackagePath")->once()->andReturn("foo");
 
-    $this->assertEquals("foo", $installer->getPackageBasePath($package));
+    $this->assertEquals("foo/bar/baz", $installer->getPackageBasePath($package));
 
     $installer->shouldReceive("getRootPath")->once()->andReturn("bar");
 
-    $this->assertEquals("bar", $installer->getPackageBasePath($package));
+    $this->assertEquals("bar/bar/baz", $installer->getPackageBasePath($package));
   }
 
   /** @test */

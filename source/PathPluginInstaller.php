@@ -17,11 +17,11 @@ class PathPluginInstaller extends LibraryInstaller
     $root = $this->composer->getPackage();
 
     if ($rootPath = $this->getRootPath($root, $package)) {
-      return $rootPath;
+      return $rootPath . "/" . $package->getName();
     }
 
     if ($packagePath = $this->getPackagePath($package)) {
-      return $packagePath;
+      return $packagePath . "/" . $package->getName();
     }
 
     return parent::getPackageBasePath($package);
