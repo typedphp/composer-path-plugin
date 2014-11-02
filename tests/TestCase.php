@@ -13,10 +13,15 @@ use Composer\Package\PackageInterface;
 
 class LibraryInstaller
 {
-  public function getPackageBasePath(PackageInterface $package)
-  {
-    return "mocked parent method";
-  }
+    /**
+     * @param PackageInterface $package
+     *
+     * @return string
+     */
+    public function getPackageBasePath(PackageInterface $package)
+    {
+        return "mocked parent method";
+    }
 }
 
 namespace Composer\IO;
@@ -40,8 +45,11 @@ use PHPUnit_Framework_TestCase;
 
 class TestCase extends PHPUnit_Framework_TestCase
 {
-  public function tearDown()
-  {
-    Mockery::close();
-  }
+    /**
+     * @return void
+     */
+    public function tearDown()
+    {
+        Mockery::close();
+    }
 }

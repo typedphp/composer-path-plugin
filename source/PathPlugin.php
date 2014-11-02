@@ -8,17 +8,19 @@ use Composer\Plugin\PluginInterface;
 
 class PathPlugin implements PluginInterface
 {
-  /**
-   * @param Composer    $composer
-   * @param IOInterface $io
-   */
-  public function activate(Composer $composer, IOInterface $io)
-  {
-    $installer = new PathPluginInstaller($io, $composer);
+    /**
+     * @param Composer    $composer
+     * @param IOInterface $io
+     *
+     * @return void
+     */
+    public function activate(Composer $composer, IOInterface $io)
+    {
+        $installer = new PathPluginInstaller($io, $composer);
 
-    $composer
-      ->getInstallationManager()
-      ->addInstaller($installer);
-  }
+        $composer
+            ->getInstallationManager()
+            ->addInstaller($installer);
+    }
 
 }
