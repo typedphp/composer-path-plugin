@@ -1,7 +1,7 @@
 {
     "name": "typedphp/composer-path-plugin",
     "type": "composer-plugin",
-    "description": "This is a Composer plugin which allows any package to define its own install path.",
+    "description": "A Composer plugin which allows any package to define its own install path.",
     "license": "MIT",
     "authors": [
         {

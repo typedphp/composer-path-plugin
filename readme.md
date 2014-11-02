@@ -6,7 +6,7 @@
 ![Version](http://img.shields.io/packagist/v/typedphp/composer-path-plugin.svg?style=flat-square)
 ![License](http://img.shields.io/packagist/l/typedphp/composer-path-plugin.svg?style=flat-square)
 
-This is a Composer plugin which allows any package to define its own install path.
+A Composer plugin which allows any package to define its own install path.
 
 ## Examples
 
