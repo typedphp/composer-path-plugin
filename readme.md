@@ -14,9 +14,7 @@ You can define where a dependency should install itself to:
 
 ```php
 "extra" : {
-    "extra" : {
-        "path" : "tests"
-    }
+    "path" : "tests"
 }
 ```
 
